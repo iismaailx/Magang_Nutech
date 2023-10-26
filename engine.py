@@ -3,8 +3,10 @@ import cv2
 import ocr
 import base64
 import json
+import io
 from pyclassification import classify
 from gst_camera import camera
+from picamera2 import Picamera2
 
 
 # Initialize socket server
@@ -51,6 +53,11 @@ response = {
     }
 }
 
+def picapture():
+    cam = Picamera2
+    stream = io.BytesIO()
+    cam.start_and_capture_stream(stream)
+    return stream.getvalue()
 
 def cameracap():
     cap = cv2.VideoCapture(camera(0, 480, 360))
