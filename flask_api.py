@@ -74,8 +74,8 @@ def receive_json():
                 return jsonify(json_content, ), 400
         except Exception as e:
             return jsonify({'error': str(e)}), 400
-    # return jsonify(json_content, ), 200
-    return render_template('result.html', data=json_content)
+    return jsonify(json_content, ), 200
+    # return render_template('result.html', data=json_content)
     
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)
