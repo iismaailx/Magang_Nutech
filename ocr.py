@@ -5,9 +5,8 @@ import pandas as pd
 import pytesseract
 import re
 import textdistance
-import datetime
 from datetime import date
-from operator import itemgetter, attrgetter
+from operator import itemgetter
 
 ROOT_PATH = os.getcwd()
 # IMAGE_PATH = os.path.join(ROOT_PATH, 'Kywa.jpg')
