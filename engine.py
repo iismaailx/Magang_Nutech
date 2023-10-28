@@ -3,10 +3,8 @@ import cv2
 import ocr
 import base64
 import json
-import io
 from pyclassification import classify
-from gst_camera import camera
-from picamera2 import Picamera2
+from picamera import Picamera2
 
 
 # Initialize socket server
