@@ -1,11 +1,10 @@
 import torch
+import base64
+import cv2
+import time
+import numpy as np
 from PIL import Image
 from torchvision import models, transforms
-import base64
-import numpy as np
-import cv2
-import os
-import time
 
 model = models.resnet18(pretrained=True)
 # Cek ketersediaan GPU pada device
